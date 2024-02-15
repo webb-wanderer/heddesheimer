@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
+blockquote p
+{
+	margin-bottom: 1em;
+	padding-right: 2em;
+}
+
 body
 {
-	color: black;
+	color: #111;
 	font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 }
 
@@ -12,19 +18,19 @@ h5, h6 { text-align: center; }
 
 h5
 {
-	font-size: 17px;
+	font-size: 18px;
 	font-weight: 700;
 }
 
 h6
 {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 }
 
 article p, article li, article dl
 {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
@@ -36,6 +42,8 @@ figure, iframe, object
 {
 	margin-left: 10px;
 	margin-bottom: 10px;
+	padding-bottom: 1em;
+	padding-left: 1em;
 }
 
 form { padding-bottom: 1em; }
@@ -52,6 +60,13 @@ sub, sup, .footnote
 
 sub { bottom: -0.25em; }
 sup, .footnote { bottom: 0.33em; }
+
+summary
+{
+	display: list-item;
+	cursor: pointer;
+}
+
 .breadcrumb { margin-top: 1em; }
 .embed-responsive { margin-bottom: 1em; }
 
