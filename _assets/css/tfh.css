@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+blockquote { font-size: 16px; }
+
 blockquote p
 {
 	margin-bottom: 1em;
@@ -12,25 +14,42 @@ body
 	font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 }
 
-h1, h2, h3, h4, h5, h6, .breadcrumb, .lead, .navigation, .panel-heading { font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, sans-serif; }
-h4 { font-weight: bold; }
-h5, h6 { text-align: center; }
+caption
+{
+	font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+	text-align: center;
+}
+
+cite { font-style: italic; }
+dt, dd { font-size: 16px; }
+dl { margin-left: 50%; }
+h1, h2, h3, .breadcrumb, .lead, .navigation, .panel-heading { font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif; }
+
+h4
+{
+	font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+	font-weight: bold;
+}
 
 h5
 {
-	font-size: 18px;
+	font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+	font-size: 17.5px;
 	font-weight: 700;
+	text-align: center;
 }
 
 h6
 {
-	font-size: 18px;
+	font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+	font-size: 17px;
 	font-weight: 700;
+	text-align: center;
 }
 
 article p, article li, article dl
 {
-	font-size: 18px;
+	font-size: 17.5px;
 	line-height: 1.5;
 }
 
@@ -42,24 +61,21 @@ figure, iframe, object
 {
 	margin-left: 10px;
 	margin-bottom: 10px;
-	padding-bottom: 1em;
-	padding-left: 1em;
 }
 
 form { padding-bottom: 1em; }
 q { quotes: "“" "”" "‘" "’"; }
 q::before { content: open-quote; }
 q::after { content: close-quote; }
+section { padding-top: 1em; }
 
-sub, sup, .footnote
+sub
 {
+	bottom: -0.25em;
 	font-size: smaller;
 	vertical-align: baseline;
 	position: relative;
 }
-
-sub { bottom: -0.25em; }
-sup, .footnote { bottom: 0.33em; }
 
 summary
 {
@@ -67,7 +83,16 @@ summary
 	cursor: pointer;
 }
 
+sup
+{
+	bottom: 0.33em;
+	font-size: smaller;
+	vertical-align: baseline;
+	position: relative;
+}
+
 .breadcrumb { margin-top: 1em; }
+.columns { column-gap: 1em; margin-bottom: 1em; }
 .embed-responsive { margin-bottom: 1em; }
 
 .footer
@@ -180,4 +205,13 @@ summary
 	/* keeps it on the bottom once in view */
 	bottom: 60px;
 	right: 1em;
+}
+@media (min-width: 768px)
+{
+	.columns { column-count: 2; }
+}
+
+@media (min-width: 992px)
+{
+	.columns { column-count: 3; }
 }
