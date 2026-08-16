@@ -10,6 +10,15 @@
 <!-- end bbinclude -->
 	<title>Find files on this site</title>
 	<link rel="stylesheet" href="/_assets/css/search.css" media="screen">
+<!-- #bbinclude "pagefind-meta.incl" -->
+<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+<style>
+	.sidebar-search pagefind-modal-trigger {
+	    display: block;
+	    width: 100%;
+	}
+</style>
+<!-- end bbinclude -->
 </head>
 <body>
 <!-- #bbinclude "page-header-small.incl" -->
@@ -18,14 +27,13 @@
 			<h1>
 				Search the Don Heddesheimer archive
 			</h1>
-			<form action="https://www.google.com/search" method="get" class="search-form">
-<!-- Hidden input to restrict search to specific domain -->
-				<input type="hidden" name="sitesearch" value="don-heddesheimer.historiography-project.com">
-				<div class="search-wrapper">
-					<input type="text" name="q" placeholder="Search the Don Heddesheimer archive ..." required="">
-					<button type="submit">Search</button>
-				</div>
-			</form>
+<!-- #bbinclude "pagefind-searchbox.incl" -->
+<div class="sidebar-search"><pagefind-input></pagefind-input><pagefind-summary></pagefind-summary><pagefind-results></pagefind-results></div>
+<p class="small text-right">Search feature courtesy <a href="https://pagefind.app/" id="note">Pagefind</a>.</p>
+<!-- #bbpragma ignore_errors="on" -->
+<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+<!-- #bbpragma ignore_errors="off" -->
+<!-- end bbinclude -->
 			<h2>
 				Search the entire Historiography Project
 			</h2>
